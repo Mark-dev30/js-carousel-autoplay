@@ -36,6 +36,7 @@
     position: absolute;
     top: 0;
     right: 0px;
+    transform: translate(184px);
 }
 
 .item-thumbnails{
