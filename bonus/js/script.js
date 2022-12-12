@@ -57,6 +57,9 @@ next.addEventListener('click', function(){
     items[itemActive].classList.add('active');
     circles[itemActive].classList.add('active')
     layer[itemActive].classList.add('no_layer')
+
+    //BONUS------
+    clearInterval(stop);
 });
 
 prev.addEventListener('click', function(){
@@ -74,9 +77,14 @@ prev.addEventListener('click', function(){
     items[itemActive].classList.add('active');
     circles[itemActive].classList.add('active')
     layer[itemActive].classList.add('no_layer')
-})
 
-setInterval(function(){
+    //BONUS------
+    setInterval(autoplay, 3000);
+
+    
+})
+function autoplay ()
+{
     items[itemActive].classList.remove('active');
     circles[itemActive].classList.remove('active')
     layer[itemActive].classList.remove('no_layer')
@@ -87,7 +95,10 @@ setInterval(function(){
     items[itemActive].classList.add('active');
     circles[itemActive].classList.add('active')
     layer[itemActive].classList.add('no_layer')
-}, 3000);
+}
+
+//BONUS------
+let stop = setInterval(autoplay, 3000);
 
 
 
